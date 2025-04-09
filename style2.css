@@ -1,0 +1,96 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    margin: 0 0;
+    background-color: aliceblue;
+}
+.logo{
+   width: 7%;
+   height: auto;
+}
+.list-items{
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+}
+.list-items a{
+    text-decoration: none;
+    color: rgb(37, 14, 243);
+    font-size: large;
+}
+.mission{
+    width: 100%;
+    height: auto;
+}
+.flex-container{
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 5rem;
+}
+.flex-item1,.flex-item2,.flex-item3,.flex-item4{
+    border: 1px solid black;
+    padding: 1rem;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr;
+    gap: 0.3rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.gridbox{
+    padding: 1rem;
+    border: 1px solid black;
+}
+.footer {
+    display: grid;
+    grid-template-areas: 
+      "blue green ."
+      "red gray orange"
+      "violet violet violet";
+    gap: clamp(0.3rem, 2vw, 1rem);
+    background-color: lightblue;
+    padding: 1rem;
+    border-top: 2px solid blue;
+  }
+  
+  .blue {
+    grid-area: blue;
+  }
+  .green {
+    grid-area: green;
+  }
+  .red {
+    grid-area: red;
+  }
+  .gray {
+    grid-area: gray;
+  }
+  .orange {
+    grid-area: orange;
+  }
+  .violet {
+    grid-area: violet;
+  } 
+  
+  .blue, .green, .red, .gray, .violet, .orange {
+    border: 1px solid black;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  @media (max-width: 400px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 3fr;
+        gap: 0.3rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        background-color: aquamarine;
+    }  
+    .grid > :nth-child(3) {
+        grid-column: 1 / -1; 
+        grid-row: 2;         
+      } 
+  }
